@@ -260,6 +260,21 @@ class DirtyDiffWidget extends PeekViewWidget {
 		this._actionbarWidget!.push(actions.reverse(), { label: false, icon: true });
 		this._actionbarWidget!.push([next, previous], { label: false, icon: true });
 		this._actionbarWidget!.push(new Action('peekview.close', nls.localize('label.close', "Close"), Codicon.close.classNames, true, () => this.dispose()), { label: false, icon: true });
+
+		// this._actionbarWidget!.getContainer().style.flexDirection = 'row-reverse';
+
+		// changes made in dev tools
+		// container {
+		// 	flex-direction: row-reverse;
+		// 	justify-content: space-between;
+		// }
+		// title {
+		// 	margin-right: 20px;
+		// }
+		// actions {
+		// 	padding-left: 20px;
+		// }
+
 	}
 
 	protected override _getActionBarOptions(): IActionBarOptions {
